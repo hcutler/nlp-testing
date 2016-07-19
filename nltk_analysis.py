@@ -1,6 +1,7 @@
 import nltk
 import csv
 import sys
+import itertools
 
 #from pylab import *
 # import matplotlib.pyplot as plt
@@ -17,7 +18,7 @@ import sys
 tokens = []
 sentences = []
 
-with open("all_content-COMBINED.txt","r") as f:
+with open("sample.txt","r") as f:
   data = f.read().decode('utf8') # type 'string'
   #tokens = nltk.word_tokenize(data)
   sentences = nltk.sent_tokenize(data)
@@ -26,10 +27,9 @@ with open("all_content-COMBINED.txt","r") as f:
 tokenized_sentences = [nltk.word_tokenize(sentence) for sentence in sentences]
 tagged_sentences = [nltk.pos_tag(sentence) for sentence in tokenized_sentences]
 chunked_sentences = nltk.ne_chunk_sents(tagged_sentences, binary=True)
-
-
 def extract_entity_names(t):
     entity_names = []
+
 
     if hasattr(t, 'label') and t.label:
         if t.label() == 'NE':
@@ -40,32 +40,56 @@ def extract_entity_names(t):
 
     return entity_names
 
-
+ent_tuples = []
+ent_list_by_sentence = []
 entity_names = []
 for tree in chunked_sentences:
-    # Print results per sentence
-    # print extract_entity_names(tree)
 
-    entity_names.extend(extract_entity_names(tree))
+    # Print results per sentence
+    ent_list_by_sentence.append(extract_entity_names(tree))
+
+for s in ent_list_by_sentence:
+  #print s
+  ent_tuples.append(tuple(itertools.combinations(s, 2)))
+print '\n'
+print 'Welcome to Civic Tech "Reverse-MadLibs"! \n'
+print 'Your responses can help us better understand the relations between'
+print 'individuals, companies, and organizations in civic tech.\n'
+for t in ent_tuples:
+  # response = raw_input("Please enter the relationship between")
+  for pair in t:
+    strpair = str(pair)
+    response = raw_input("Please enter the relationship between " + strpair + ': \n')
+
+    with open("relations.txt", 'a') as f:
+      f.write(strpair + '\n' + response + '\n')
+
+  # for ent in s:
+
+  #   response = raw_input("Please enter the relationship between")
+  #   print ent
+  #   raw_input('Press enter to continue)
+
+    #entity_names.extend(extract_entity_names(tree))
 
 # Print all entity names
 # print entity_names
 
 # Print unique entity names
-unique_en = set(entity_names)
+#unique_en = set(entity_names)
 
 # print len(unique_en)
 # Result: 9452
 
-for en in unique_en:
-  print en + ','
+# for en in unique_en:
+#   print en + ','
   # with open('unique_en_all.txt', 'wb') as f:
   #   # writer = csv.writer(f)
   #   # writer.writerows(en)
 
 
 # Word token analysis
-#text = nltk.Text(tokens)
+# text = nltk.Text(tokens)
 
 # Text.concordance("keyword") searches text for all occurences of keyword.
 # Can parse other sources for instances of people, organizations, names, etc.
@@ -140,4 +164,5 @@ for en in unique_en:
 # text2 = nltk.Text(tokens2)
 
 # print sorted(w for w in set(text2) if w.istitle() and len(w) > 3)
+
 
