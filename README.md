@@ -1,6 +1,6 @@
 # Hypothesis Testing: Data Automation for Civic Graph
 
-## In this repo...
+## In this repo:
 * Testing different NLP tools (spaCy, nltk and others) to analyze corpus of blog content about civic tech
 * Algorithm for discerning high level information about folks in the civic technology scene
     * Sentence tokenization of training data
@@ -13,3 +13,4 @@
 * Parse sentences once labels have been defined to do Named Entity Recognition (NER) and use the correct action words to imply causality (on training? on test?)
 * Save results to database (create new schema or pipe directly to Civic Graph)?
 * Design pipeline to Civic Graph backend
+* Include pipeline diagram in repo
