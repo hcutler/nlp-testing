@@ -5,9 +5,10 @@
 #     * Employment
 #     * Collaboration
 #     * Location - from investigator
-# 2. parse individual sentences once high level labels have been defined to do deep semantic analysis automatically
+# 2. Parse individual sentences once high level labels have been defined to do deep semantic analysis automatically
 #    * We do this by pulling out the named entities and using the correct action words to imply causality
-# 3. save to database
+# 3. Save to database
+
 import spacy
 import nltk
 from spacy.parts_of_speech import *
@@ -72,7 +73,7 @@ sentences = [sent.string.strip() for sent in doc.sents]
 STOPLIST = set(stopwords.words('english') + ["n't", "'s", "'m", "ca"] + list(ENGLISH_STOP_WORDS))
 SYMBOLS = " ".join(string.punctuation).split(" ") + ["-----", "---", "..."]
 
-# #ToDo fill in the labels your self!
+# #TODO: fill in the labels
 labels = [] # funding
 labels2 = [] # data
 labels3 = [] # employment
@@ -88,7 +89,7 @@ training4 = zip(data2, labels2)
 training5 = zip(data2, labels2)
 
 # create classifier for each training set
-cl = svm(training) 
+cl = svm(training)
 cl2 = svm(training2)
 cl3 = svm(training3)
 cl4 = svm(training4)
@@ -98,7 +99,8 @@ cl5 = svm(training5)
 test = preprocess("hello there friends")
 
 
-# Now do something with the test set and each classifier??
+# Do something with the test set and each classifier??
 # use something like "accuracy(cl, test)"?
+
 
 
