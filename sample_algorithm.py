@@ -88,7 +88,7 @@ training4 = zip(data2, labels2)
 training5 = zip(data2, labels2)
 
 # create classifier for each training set
-cl = svm(training) #
+cl = svm(training) 
 cl2 = svm(training2)
 cl3 = svm(training3)
 cl4 = svm(training4)
@@ -98,8 +98,7 @@ cl5 = svm(training5)
 test = preprocess("hello there friends")
 
 
-#Now do something with the test set and each classifier??
-#????
-
+# Now do something with the test set and each classifier??
+# use something like "accuracy(cl, test)"?
 
 
