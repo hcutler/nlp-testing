@@ -8,7 +8,7 @@
 ⋅⋅⋅Create classifier for each label using a Support Vector Machine
 
 ## To do:
-⋅⋅⋅Run each classifier on test data
-⋅⋅⋅Parse sentences once labels have been defined to do Named Entity Recognition (NER) and use the correct action words to imply causality (on training? on test?)
-⋅⋅⋅Save results to database (create new schema or pipe directly to Civic Graph)?
-⋅⋅⋅Design pipeline to Civic Graph backend
+* Run each classifier on test data
+* Parse sentences once labels have been defined to do Named Entity Recognition (NER) and use the correct action words to imply causality (on training? on test?)
+* Save results to database (create new schema or pipe directly to Civic Graph)?
+* Design pipeline to Civic Graph backend
