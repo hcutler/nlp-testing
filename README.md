@@ -14,3 +14,13 @@
 * Save results to database (create new schema or pipe directly to Civic Graph)?
 * Design pipeline to Civic Graph backend
 * Include pipeline diagram in repo
+
+
+## Tools used:
+* [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+* [spaCy](https://spacy.io/docs)
+* [nltk](http://www.nltk.org/book/)
+* [scikit-learn](http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html)
+
+## Have not used but plan to explore:
+* [textacy](https://pypi.python.org/pypi/textacy)
