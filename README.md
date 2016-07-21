@@ -11,7 +11,7 @@
 ## To do:
 * Find training datasets (one for each classifier)
       * Sentence tokenize training data
-      * Manually label sentences in each training dataset (1: has label ____, 0: does not have label ____)
+      * Manually label sentences in each training dataset (1: has label , 0: doesn't have label)
 * Run each classifier on test data
 * Parse sentences once labels have been defined to do Named Entity Recognition (NER) and use the correct action words to imply causality (on training? on test?)
 * Save results to database (create new schema or pipe directly to Civic Graph)?
