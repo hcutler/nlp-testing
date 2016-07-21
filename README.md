@@ -24,3 +24,4 @@
 
 ## Have not used but plan to explore:
 * [textacy](https://pypi.python.org/pypi/textacy)
+* [Google Knowledge Graph Search API](https://developers.google.com/knowledge-graph/)
