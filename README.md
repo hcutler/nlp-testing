@@ -24,7 +24,6 @@
 * [spaCy](https://spacy.io/docs)
 * [nltk](http://www.nltk.org/book/)
 * [scikit-learn](http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html)
-* [wikidata_suggest API](https://pypi.python.org/pypi/wikidata_suggest/0.0.6)
 
 ## Exploring:
 * [Bing Knowledge Widget](https://www.bing.com/partners/developers#BingSearchApi)
