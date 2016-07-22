@@ -27,6 +27,7 @@
 * [wikidata_suggest API](https://pypi.python.org/pypi/wikidata_suggest/0.0.6)
 
 ## Exploring:
+* [Bing Knowledge Widget](https://www.bing.com/partners/developers#BingSearchApi)
 * [Wikipedia API](https://pypi.python.org/pypi/wikipedia/)
 * [Wikidata package](https://pypi.python.org/pypi/wikidata_suggest/0.0.6)
 * [Google Knowledge Graph Search API](https://developers.google.com/knowledge-graph/)
